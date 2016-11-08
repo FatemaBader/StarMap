@@ -9,6 +9,7 @@ void setup()
   size(800,800);
   
   loadData();
+  printStars();
 }
 
 //populates the ArrayList
@@ -28,7 +29,21 @@ void loadData()
     Star stars = new Star(row);
     data.add(stars);
   }
-  
+}
+
+//prints the contents of the ArrayList
+void printStars()
+{
+  /*for (Star e : data)
+    {
+      println(e);
+    }*/
+  for (int i = 0; i < data.size(); i ++)
+  {
+    Star e = data.get(i);
+    println(e);
+  }
+
 }
 
 void draw()
